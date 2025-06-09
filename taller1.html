@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Introducción al Diseño de Empaques Infantiles</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="taller1.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Barra de título con imagen -->
+    <div class="barra-titulo">
+      <a href="index.html">
+        <img src="back-arrow_icon-icons.com_54057.png" alt="Volver"> <!-- Triángulo marrón -->
+      </a>
+      <h4>Introducción al Diseño de Empaques Infantiles</h4>
+    </div>
+
+    <!-- Subida de imagen -->
+    <form class="mt-4">
+      <label for="archivo" class="upload-box w-100">
+        <img src="seo-social-web-network-internet_25_icon-icons.com_61513.png" alt="Subir"> <!-- Imagen de nube -->
+        <div>Subir imagen de empaque</div>
+        <input type="file" id="archivo" name="archivo" accept="image/*">
+      </label>
+
+      <!-- Notas a destacar -->
+      <div class="mt-4">
+        <label for="notas" class="form-label">Notas a destacar</label>
+        <textarea id="notas" class="notas" placeholder="Escribe tus observaciones aquí..."></textarea>
+      </div>
+
+      <!-- Botón de resultados -->
+      <div class="text-center mt-4">
+        <a href="resultado1.html" class="btn-resultado text-decoration-none">Resultados</a>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

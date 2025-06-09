@@ -1,0 +1,37 @@
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+  }
+  .btn-orange {
+    background-color: #dc8f1d;
+    color: white;
+    border: none;
+  }
+  .btn-orange:hover {
+    background-color: #c97f14;
+  }
+  .input-box {
+    background-color: #29a8df;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  .form-label-custom {
+    background-color: #4d4d4d;
+    color: white;
+    border-radius: 10px;
+    padding: 2px 10px;
+    font-size: 0.75rem;
+    display: inline-block;
+    margin-bottom: 4px;
+  }
+  .btn-social {
+    background-color: #d9d9d9;
+    border: none;
+    width: 100%;
+    padding: 0.5rem;
+    font-weight: bold;
+  }
+  .btn-social img {
+    width: 20px;
+    margin-right: 8px;
+  }

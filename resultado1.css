@@ -1,0 +1,67 @@
+body {
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    padding-top: 1rem;
+  }
+
+  .barra-titulo {
+    background-color: #a65224;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .barra-titulo img {
+    height: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .barra-titulo h4 {
+    margin: 0;
+    background-color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 0.25rem;
+  }
+
+  .modulo-badge {
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 0.3rem 1rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  .result-card {
+    background-color: #0e071b;
+    padding: 2rem;
+    border-radius: 10px;
+    color: white;
+  }
+
+  .progress {
+    height: 20px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+
+  .progress-bar {
+    transition: width 2s ease-in-out;
+  }
+
+  .btn-resultado {
+    background-color: #d68c2e;
+    color: white;
+    border-radius: 25px;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    margin: 0.5rem;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .alerta-felicidades {
+    display: none;
+    margin-top: 1.5rem;
+  }

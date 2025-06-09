@@ -1,0 +1,55 @@
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+  }
+  .titulo-bar {
+    background-color: #a65224;
+    padding: 0.5rem 1rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .titulo-bar h5 {
+    margin: 0;
+    background-color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: normal;
+  }
+  .video-container {
+    border: 2px solid #29a8df;
+    background-color: #2b2626;
+    position: relative;
+    padding-top: 56.25%; /* 16:9 ratio */
+    margin-top: 1rem;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .btn-flecha {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  .redes-sociales img {
+    width: 30px;
+    margin-left: 10px;
+  }
+  .texto-descriptivo {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .light-bg-box {
+    background-color: #f2f2f2;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  .img-bordered {
+    border: 4px solid #00264d;
+  }

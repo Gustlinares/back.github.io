@@ -1,0 +1,55 @@
+.barra-titulo {
+    background-color: #a65224;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+  }
+
+  .barra-titulo img {
+    height: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .barra-titulo h4 {
+    margin: 0;
+    background-color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 0.25rem;
+  }
+
+  .upload-box {
+    background-color: #dcdcdc;
+    border: 2px dashed #aaa;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .upload-box img {
+    width: 50px;
+    margin-bottom: 10px;
+  }
+
+  .notas {
+    background-color: #dcdcdc;
+    border-radius: 10px;
+    padding: 1rem;
+    resize: none;
+    width: 100%;
+    min-height: 100px;
+  }
+
+  .btn-resultado {
+    background-color: #d68c2e;
+    color: white;
+    border-radius: 25px;
+    padding: 0.5rem 2rem;
+    border: none;
+  }
+
+  input[type="file"] {
+    display: none;
+  }

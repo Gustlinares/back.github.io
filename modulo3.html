@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Módulo 3 - B.A.C.K</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Chau Philomene One', sans-serif;
+      background-color: #f9f9f9;
+      color: #0B121F;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #FFFFFF;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 0.5rem 1rem;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .navbar-nav .nav-link {
+      color: #0B121F;
+      margin-left: 8px;
+      margin-right: 8px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      background-color: rgba(183, 221, 255, 0.3);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+      transform: translateY(-1px);
+      color: #0B121F;
+      text-decoration: none;
+    }
+
+    .dropdown-menu {
+      border-radius: 8px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    }
+
+    .dropdown-item:hover {
+      background-color: rgba(183, 221, 255, 0.2);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(to right, #D28829, #37ACDB, #D28829);
+      color: #FFFFFF;
+      text-align: center;
+      padding: 60px 20px;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 6px 20px rgba(55, 172, 219, 0.5);
+      margin-bottom: 40px;
+    }
+
+    /* Module Section */
+    .module-section {
+      padding: 0 15px 50px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .module-box {
+      background-color: #FFFFFF;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 30px 35px;
+      margin-bottom: 40px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .module-box:hover {
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Upload Box */
+    .upload-box {
+      background-color: #f9f9f9;
+      border: 2px dashed #37ACDB;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(55, 172, 219, 0.2);
+      transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .upload-box:hover {
+      box-shadow: 0 6px 20px rgba(55, 172, 219, 0.4);
+      border-color: #D28829;
+    }
+
+    .upload-box p {
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #0B121F;
+    }
+
+    .upload-box input[type="file"] {
+      border-radius: 8px;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+      border: 1px solid #ccc;
+      padding: 6px 10px;
+      transition: border-color 0.3s ease;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto 15px auto;
+      display: block;
+    }
+
+    .upload-box input[type="file"]:focus {
+      outline: none;
+      border-color: #37ACDB;
+      box-shadow: 0 0 6px rgba(55, 172, 219, 0.6);
+    }
+
+    /* Submit Button */
+    #submitBtn {
+      background-color: #D28829;
+      color: #fff;
+      border: none;
+      padding: 10px 30px;
+      font-weight: 700;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease,
+        transform 0.2s ease;
+      box-shadow: 0 6px 14px rgba(210, 136, 41, 0.6);
+    }
+
+    #submitBtn:hover:not(:disabled) {
+      background-color: #b56f1d;
+      box-shadow: 0 8px 18px rgba(181, 111, 29, 0.8);
+      transform: translateY(-2px);
+    }
+
+    #submitBtn:disabled {
+      cursor: not-allowed;
+      opacity: 0.7;
+      box-shadow: none;
+      transform: none;
+    }
+
+    /* Spinner */
+    .spinner-border.text-warning {
+      width: 2rem;
+      height: 2rem;
+      margin: 0 auto;
+      display: block;
+    }
+
+    /* Image Styling */
+    .example-image {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 15px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Next Steps Container */
+    #nextSteps {
+      max-width: 600px;
+      margin: 30px auto 0;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .module-box {
+        padding: 25px 20px;
+      }
+
+      .upload-box input[type="file"] {
+        max-width: 100%;
+      }
+
+      #nextSteps {
+        padding: 0 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="logo.png" alt="Logo" style="height: 40px;" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="resultado.html">Resultados</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown">Módulos</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="modulo1.html">Introducción</a></li>
+              <li><a class="dropdown-item" href="modulo2.html">Psicología del color</a></li>
+              <li><a class="dropdown-item" href="#">Diseño creativo</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="Contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Módulo 3: Diseño de Envolturas y Etiquetas Creativas</h1>
+    <p>Aprende a diseñar envolturas y etiquetas que comuniquen, protejan y conecten emocionalmente con el público infantil.</p>
+  </section>
+
+  <div class="container module-section">
+    <div class="module-box">
+      <h2>Objetivo del Módulo</h2>
+      <p>Dominar el diseño visual de envolturas y etiquetas llamativas, funcionales y seguras para productos infantiles. Este módulo te enseñará a estructurar gráficamente la información esencial, usar elementos ilustrativos, y crear una identidad visual coherente.</p>
+
+      <h3>Contenido</h3>
+      <ul>
+        <li>Tipos de envolturas: cajas, blisters, bolsas, sleeves y más.</li>
+        <li>Elementos esenciales de una etiqueta: logo, edad recomendada, advertencias, beneficios, códigos, etc.</li>
+        <li>Estilo gráfico: uso de personajes, tipografías amigables y jerarquía visual.</li>
+        <li>Requisitos de seguridad y materiales recomendados.</li>
+      </ul>
+
+      <h3>Explicación Visual</h3>
+
+      <div>
+        <img src="c6f25796530bb533cf394f2cc059c9fd.jpg" alt="Ejemplo de etiqueta con personajes y colores vivos" class="example-image" />
+      </div>
+      <p>El uso de ilustraciones simpáticas, fuentes legibles y colores contrastantes ayuda a captar la atención del niño y transmite alegría y confianza.</p>
+
+      <div>
+        <img src="b0b658177fd07f7842b7e0a40189706a.jpg" alt="Diseño de envoltura funcional con ventana transparente" class="example-image" />
+      </div>
+      <p>Las ventanas que permiten ver el producto generan confianza en los padres y aumentan el interés del niño. El empaque debe proteger, pero también mostrar lo que ofrece.</p>
+
+      <h4>Tips para un diseño exitoso:</h4>
+      <ul>
+        <li>Usa elementos gráficos grandes y claros, adaptados al nivel visual del niño.</li>
+        <li>Equilibra estética y funcionalidad. Piensa en cómo se abre, manipula y almacena.</li>
+        <li>Asegúrate de incluir toda la información obligatoria (edad, advertencias, etc.).</li>
+        <li>Utiliza materiales seguros, resistentes y sostenibles si es posible.</li>
+      </ul>
+
+      <h3>Actividad</h3>
+      <p>Crea una propuesta de diseño para una envoltura o etiqueta de un producto infantil:</p>
+      <ul>
+        <li>Incluye nombre del producto, logotipo, colores, tipografía, información clave y elementos visuales.</li>
+        <li>Puedes hacerlo en forma de maqueta digital o boceto ilustrado.</li>
+        <li>Agrega una explicación breve sobre las decisiones de diseño tomadas.</li>
+      </ul>
+
+      <h4>Checklist: ¿Tu diseño está listo?</h4>
+      <ul>
+        <li>¿La etiqueta comunica el mensaje de manera clara?</li>
+        <li>¿Los elementos visuales están organizados con jerarquía?</li>
+        <li>¿La propuesta es segura, atractiva y funcional?</li>
+        <li>¿Tu diseño refleja una identidad de marca coherente?</li>
+      </ul>
+
+      <div class="upload-box mt-4" id="uploadBox">
+        <p><strong>🔽 Sube tu análisis y propuesta aquí (JPG, PNG, PDF):</strong></p>
+        <input type="file" class="form-control mb-2" id="fileInput" />
+        <button class="btn btn-warning text-white" id="submitBtn">Enviar trabajo</button>
+
+        <div class="spinner-border text-warning mt-3" role="status" id="spinner" style="display: none;">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+      </div>
+
+      <div class="container text-center mt-4" id="nextSteps" style="display: none;">
+        <div class="alert alert-success" role="alert">
+          🎉 <strong>¡Felicidades!</strong> Has terminado tu trabajo. Visita la pestaña de <strong>Resultados</strong> para saber tu calificación.
+        </div>
+        <a href="index.html" class="btn btn-secondary m-2">Volver al inicio</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("submitBtn").addEventListener("click", function () {
+      const fileInput = document.getElementById("fileInput");
+      const spinner = document.getElementById("spinner");
+      const submitBtn = document.getElementById("submitBtn");
+      const nextSteps = document.getElementById("nextSteps");
+
+      if (!fileInput.files.length) {
+        alert("Por favor, selecciona un archivo antes de enviar.");
+        return;
+      }
+
+      submitBtn.disabled = true;
+      spinner.style.display = "inline-block";
+
+      setTimeout(() => {
+        spinner.style.display = "none";
+        submitBtn.innerHTML = "Enviado ✅";
+        submitBtn.classList.remove("btn-warning");
+        submitBtn.classList.add("btn-success");
+        nextSteps.style.display = "block";
+      }, 2000);
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
